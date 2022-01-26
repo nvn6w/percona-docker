@@ -5,6 +5,9 @@ datadir=/var/lib/mysql
 socket=/tmp/mysql.sock
 skip-host-cache
 
+#Disable SSL
+pxc_encrypt_cluster_traffic = OFF
+
 #coredumper
 #server_id=0
 binlog_format=ROW

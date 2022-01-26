@@ -135,6 +135,9 @@ USER 1001
 
 VOLUME ["/var/lib/mysql", "/var/log/mysql"]
 
+COPY ./dockerdir/docker-healthcheck /usr/local/bin/
+HEALTHCHECK CMD ["docker-healthcheck"]
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 3306 4567 4568 33060
